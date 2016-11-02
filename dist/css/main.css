@@ -1,0 +1,32 @@
+ul {
+  margin: 0;
+  padding: 0; }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto; }
+  .navigation a {
+    color: black;
+    text-decoration: none; }
+    .navigation a:hover {
+      color: red; }
+
+.active {
+  border-bottom: 1px solid red;
+  color: red; }
+
+.not-allowed:hover {
+  cursor: not-allowed; }
+
+.app-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 100%; }
+
+.child h1 {
+  font-size: 2em; }
+
+/*# sourceMappingURL=main.css.map */

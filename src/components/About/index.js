@@ -6,8 +6,8 @@ export default class About extends React.Component {
 	}
 	render() {
 		return(
-			<div className="child about">
-				<h2>About</h2>
+			<div className="about">
+				<h1>About</h1>
 				<p>Hello, my name is Micah Cowell. I am a self proclaimed web developer who likes the internet, hip hop, and fancy yo-yos.</p>
 			</div>
 		);

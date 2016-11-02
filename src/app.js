@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import Sidebar from './components/Sidebar';
+import Navigation from './components/Navigation';
 import About from './components/About';
 import Home from './components/Home';
 import Error from './components/Error';
@@ -15,7 +15,7 @@ export default class App extends React.Component {
 	render() {
 		return(
 			<div className="app-container">
-				{<Sidebar/>}
+				<Navigation/>
 				{this.props.children}
 			</div>
 		);
