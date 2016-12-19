@@ -14,14 +14,14 @@ p {
   p img {
     width: 32px;
     height: auto; }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 375px) {
       p img {
         width: 24px; } }
   p span {
     margin: 0 8px;
     font-size: 16px;
     font-family: monospace; }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 375px) {
       p span {
         font-size: 12px; } }
 
