@@ -10,6 +10,13 @@ h1 {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+a {
+	color: #0000ff;
+	&:hover, &:visited, &:active {
+		color: #0000ff;
+	}
+}
+
 div {
 	padding: 8px 0;
 	white-space: nowrap;
