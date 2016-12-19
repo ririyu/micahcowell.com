@@ -1,8 +1,12 @@
 $iphone: 375px;
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
 	padding: 16px 8px;
-	overflow-x: hidden;
 }
 
 h1 {
