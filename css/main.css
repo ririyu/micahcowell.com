@@ -6,24 +6,27 @@ h1 {
   font-size: 32px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
 
-p {
+div {
   padding: 8px 0;
   white-space: nowrap; }
-  p * {
+  div * {
     display: inline-block;
     vertical-align: middle; }
-  p img {
+  div img {
     width: 32px;
     height: auto; }
     @media screen and (max-width: 375px) {
-      p img {
+      div img {
         width: 24px; } }
-  p span {
-    margin: 0 8px;
+  div p {
+    margin-left: 12px;
     font-size: 16px;
-    font-family: monospace; }
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
     @media screen and (max-width: 375px) {
-      p span {
+      div p {
+        margin-left: 8px;
         font-size: 12px; } }
 
 /*# sourceMappingURL=main.css.map */

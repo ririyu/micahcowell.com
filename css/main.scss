@@ -10,7 +10,7 @@ h1 {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-p {
+div {
 	padding: 8px 0;
 	white-space: nowrap;
 	* {
@@ -24,11 +24,14 @@ p {
 			width: 24px;
 		}
 	}
-	span {
-		margin: 0 8px;
+	p {
+		margin-left: 12px;
 		font-size: 16px;
 		font-family: monospace;
+		white-space: pre-wrap;
+		word-wrap: break-word;
 		@media screen and (max-width: $iphone) {
+			margin-left: 8px;
 			font-size: 12px;
 		}
 	}
