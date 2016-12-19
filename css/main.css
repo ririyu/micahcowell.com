@@ -1,0 +1,28 @@
+body {
+  padding: 16px 8px;
+  overflow-x: scroll; }
+
+h1 {
+  font-size: 32px; }
+
+p {
+  padding: 8px 0;
+  white-space: nowrap; }
+  p * {
+    display: inline-block;
+    vertical-align: middle; }
+  p img {
+    width: 32px;
+    height: auto; }
+    @media screen and (max-width: 320px) {
+      p img {
+        width: 24px; } }
+  p span {
+    margin: 0 8px;
+    font-size: 16px;
+    font-family: monospace; }
+    @media screen and (max-width: 320px) {
+      p span {
+        font-size: 12px; } }
+
+/*# sourceMappingURL=main.css.map */
