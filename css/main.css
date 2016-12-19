@@ -3,7 +3,8 @@ body {
   overflow-x: scroll; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+  font-family: Sans-Serif; }
 
 p {
   padding: 8px 0;
