@@ -6,8 +6,9 @@ body {
   padding: 16px; }
 
 h1 {
-  font-size: 32px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+  font-size: 42px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.1; }
 
 a {
   color: #0000ff; }
