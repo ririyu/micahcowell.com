@@ -9,12 +9,6 @@ $iphone: 375px;
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		line-height: 1.1;
 	}
-	a {
-		color: #0000ff;
-		&:hover, &:visited, &:active {
-			color: #0000ff;
-		}
-	}
 	div {
 		width: 90%;
 		padding: 8px 0;
@@ -40,6 +34,15 @@ $iphone: 375px;
 				margin-left: 8px;
 				font-size: 12px;
 			}
+		}
+		a {
+			color: #0000ff;
+			&:hover, &:visited, &:active {
+				color: #0000ff;
+			}
+		}
+		.data {
+			transition: opacity 500ms ease;
 		}
 	}
 }

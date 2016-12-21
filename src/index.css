@@ -6,10 +6,6 @@
     font-size: 42px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.1; }
-  .app-container a {
-    color: #0000ff; }
-    .app-container a:hover, .app-container a:visited, .app-container a:active {
-      color: #0000ff; }
   .app-container div {
     width: 90%;
     padding: 8px 0;
@@ -33,5 +29,11 @@
         .app-container div p {
           margin-left: 8px;
           font-size: 12px; } }
+    .app-container div a {
+      color: #0000ff; }
+      .app-container div a:hover, .app-container div a:visited, .app-container div a:active {
+        color: #0000ff; }
+    .app-container div .data {
+      transition: opacity 500ms ease; }
 
 /*# sourceMappingURL=index.css.map */
