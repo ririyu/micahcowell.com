@@ -3,7 +3,7 @@
   overflow-x: hidden;
   padding: 16px; }
   .app-container h1 {
-    font-size: 42px;
+    font-size: 48px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.1; }
   .app-container div {
@@ -28,12 +28,11 @@
       @media screen and (max-width: 375px) {
         .app-container div p {
           margin-left: 8px;
-          font-size: 12px; } }
+          font-size: 14px; } }
     .app-container div a {
       color: #0000ff; }
       .app-container div a:hover, .app-container div a:visited, .app-container div a:active {
         color: #0000ff; }
     .app-container div .data {
+      -webkit-transition: opacity 500ms ease;
       transition: opacity 500ms ease; }
-
-/*# sourceMappingURL=index.css.map */
