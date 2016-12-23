@@ -1,7 +1,9 @@
 .app-container {
   max-width: 100%;
   overflow-x: hidden;
-  padding: 16px; }
+  padding: 16px;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
   .app-container h1 {
     font-size: 48px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -13,9 +15,6 @@
       text-decoration: underline; }
     .app-container a:hover, .app-container a:visited, .app-container a:active {
       color: #0000ff; }
-    .app-container a.data {
-      -webkit-transition: opacity 500ms ease;
-      transition: opacity 500ms ease; }
   .app-container b {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
   .app-container > div {

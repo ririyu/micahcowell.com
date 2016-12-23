@@ -9,15 +9,34 @@ import Mail from './Components/Mail';
 import Music from './Components/Music';
 
 export default class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			opacity: 0,
+			showMusic: true
+		}
+	}
+	show(hideMusic) {
+		if (hideMusic) {
+			this.setState({showMusic:false});
+		}
+		this.setState({opacity:1});
+	}
 	render() {
+		const appStyle = {
+			opacity: this.state.opacity
+		}
 		return(
-			<div className="app-container">
+			<div className="app-container"
+				 style={appStyle}>
 				<h1>Micah Cowell</h1>
 				<Home />
 				<School />
 				<Work />
 				<Mail />
-				<Music />
+				{this.state.showMusic &&
+					<Music onLoad={this.show.bind(this)}/>
+				}
 			</div>
 		);
 	}

@@ -7,7 +7,7 @@ const getRecentTracksURL = "http://ws.audioscrobbler.com/2.0/?method=user.getrec
 export default class Music extends React.Component {
 
 	state = {
-		response: 'John Cena'
+		response: null
 	}
 
 	loadTrackData() {
@@ -15,9 +15,13 @@ export default class Music extends React.Component {
 			if (!error && response.statusCode === 200) {
 				var track = JSON.parse(body).recenttracks.track[0];
 				var data =  track.artist['#text'] + ' - ' + track.name;
-				this.setState({response:data});
+				this.setState({response:data}, function() {
+					this.props.onLoad();
+				});
 			} else {
-				this.setState({response:'Error: could\'t connect to last.fm'});
+				this.setState({response:'Error: could\'t connect to last.fm'}, function() {
+					this.props.onLoad(true);
+				});
 			}
 		}.bind(this));
 	}
@@ -27,19 +31,11 @@ export default class Music extends React.Component {
 	}
 
 	render() {
-		const textStyle = {
-			opacity: 0
-		}
-		if (this.state.response !== 'John Cena') {
-			textStyle.opacity = 1;
-		}
 		return (
 			<div>
 				<img src={Icon} alt="headphone" />
 				<div>
-					<a className="data"
-					   style={textStyle}
-					   href="http://last.fm/user/getmicah">
+					<a href="http://last.fm/user/getmicah">
 						{this.state.response}
 					</a>
 				</div>

@@ -6,6 +6,7 @@ $iphone: 375px;
     max-width: 100%;
     overflow-x: hidden;
 	padding: 16px;
+	transition: opacity 500ms ease;
 	h1 {
 		font-size: 48px;
 		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -19,9 +20,6 @@ $iphone: 375px;
 		}
 		&:hover, &:visited, &:active {
 			color: #0000ff;
-		}
-		&.data {
-			transition: opacity 500ms ease;
 		}
 	}
 	b {
