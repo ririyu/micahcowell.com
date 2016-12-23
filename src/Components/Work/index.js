@@ -6,17 +6,24 @@ export default class Work extends React.Component {
 		return (
 			<div>
 				<img src={Icon} alt="books" />
-				<div>
-					<span>Freelance Web Developer</span>
-				</div>
 				<ul>
 					<li>
-						<b>2016:</b> Irrigation at Mercer Farms
+						<b>Current:</b>
+						<div>Freelance</div>
 					</li>
 					<li>
-						<b>2015:</b> Web Design for MSLK&nbsp;
-						(<a href="http://sherikoetting.com">1</a>,&nbsp;
-						<a href="http://giv-giving.com">2</a>)
+						<b>2016:</b>
+						<div>Irrigation at Mercer Farms</div>
+					</li>
+					<li>
+						<b>2015:</b>
+						<div>
+							Web Design for MSLK
+							<ul>
+								<li><a href="http://sherikoetting.com">sherikoetting.com</a></li>
+								<li><a href="http://gif-giving.com">gif-giving.com</a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 			</div>

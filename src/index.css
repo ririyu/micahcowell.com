@@ -7,41 +7,66 @@
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.1; }
   .app-container a {
-    color: #0000ff; }
+    color: #0000ff;
+    text-decoration: none; }
+    .app-container a:hover {
+      text-decoration: underline; }
     .app-container a:hover, .app-container a:visited, .app-container a:active {
       color: #0000ff; }
     .app-container a.data {
       -webkit-transition: opacity 500ms ease;
       transition: opacity 500ms ease; }
-  .app-container div {
+  .app-container b {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+  .app-container > div {
     width: 90%;
     padding: 12px 0;
+    font-family: monospace;
+    font-size: 16px;
     white-space: nowrap; }
-    .app-container div > img, .app-container div div {
+    .app-container > div > img, .app-container > div div {
       display: inline-block;
       vertical-align: middle; }
-    .app-container div img {
+    .app-container > div > img {
       width: 32px;
       height: auto; }
       @media screen and (max-width: 375px) {
-        .app-container div img {
+        .app-container > div > img {
           width: 24px; } }
-    .app-container div div {
-      margin-left: 16px;
-      font-size: 16px;
-      font-family: monospace; }
-      .app-container div div span, .app-container div div a {
+    .app-container > div > div {
+      margin-left: 16px; }
+      .app-container > div > div span, .app-container > div > div a {
         white-space: pre-wrap;
         word-wrap: break-word; }
-    .app-container div ul {
+    .app-container > div > ul {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 0 16px;
       list-style: none;
-      padding: 0;
-      margin: 4px 0 8px 48px; }
+      padding: 0; }
       @media screen and (max-width: 375px) {
-        .app-container div ul {
+        .app-container > div > ul {
           margin-left: 40px; } }
-      .app-container div ul li {
-        white-space: pre-wrap;
-        word-wrap: break-word; }
-      .app-container div ul b {
-        margin-right: 4px; }
+      .app-container > div > ul li {
+        margin: 6px 0;
+        font-size: 14px; }
+        @media screen and (max-width: 375px) {
+          .app-container > div > ul li {
+            font-size: 12px; } }
+        .app-container > div > ul li > * {
+          display: inline-block;
+          vertical-align: top; }
+        .app-container > div > ul li b {
+          margin-right: 8px; }
+        .app-container > div > ul li div {
+          white-space: pre-wrap;
+          word-wrap: break-word; }
+          .app-container > div > ul li div ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; }
+            .app-container > div > ul li div ul li {
+              font-size: 12px; }
+              .app-container > div > ul li div ul li:before {
+                content: "*";
+                margin-right: 4px; }
