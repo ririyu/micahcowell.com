@@ -3,8 +3,6 @@
 $iphone: 375px;
 
 .app-container {
-    max-width: 100%;
-    overflow-x: hidden;
 	padding: 16px;
 	transition: opacity 500ms ease;
 	h1 {
@@ -31,11 +29,13 @@ $iphone: 375px;
 		font-family: monospace;
 		font-size: 16px;
 		white-space: nowrap;
-		> img, div {
+		> * {
 			display: inline-block;
-			vertical-align: middle;
+			word-wrap: break-word;
+			white-space: pre-wrap;
 		}
 		> img {
+			vertical-align: middle;
 			width: 32px;
 			height: auto;
 			@media screen and (max-width: $iphone) {
@@ -43,23 +43,16 @@ $iphone: 375px;
 			}
 		}
 		> div {
+			vertical-align: middle;
 			margin-left: 16px;
-			span, a {
-				white-space: pre-wrap;
-				word-wrap: break-word;
-			}
 		}
 		> ul {
-			display: inline-block;
 			vertical-align: top;
-			margin: 0 0 0 16px;
 			list-style: none;
+			margin: 0 0 -10px 16px;
 			padding: 0;
-			@media screen and (max-width: $iphone) {
-				margin-left: 40px;
-			}
-			li {
-				margin: 6px 0;
+			> li {
+				margin: 6px 0 12px 0;
 				font-size: 14px;
 				@media screen and (max-width: $iphone) {
 					font-size: 12px;
@@ -72,13 +65,12 @@ $iphone: 375px;
 					margin-right: 8px;
 				}
 				div {
-					white-space: pre-wrap;
-					word-wrap: break-word;
 					ul {
 						list-style: none;
 						padding: 0;
 						margin: 0;
 						li {
+							margin: 8px 0;
 							font-size: 12px;
 							&:before {
 								content: "*";

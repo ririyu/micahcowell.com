@@ -12,30 +12,32 @@ export default class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			opacity: 0,
+			musicWasLoaded: false,
 			showMusic: true
 		}
 	}
-	show(hideMusic) {
-		if (hideMusic) {
+	onMusicLoad(error) {
+		if (error) {
 			this.setState({showMusic:false});
 		}
-		this.setState({opacity:1});
+		this.setState({musicWasLoaded:true});
 	}
 	render() {
-		const appStyle = {
-			opacity: this.state.opacity
+		const style = {
+			opacity: 0
+		}
+		if (this.state.musicWasLoaded) {
+			style.opacity = 1;
 		}
 		return(
-			<div className="app-container"
-				 style={appStyle}>
+			<div className="app-container" style={style}>
 				<h1>Micah Cowell</h1>
 				<Home />
 				<School />
 				<Work />
 				<Mail />
 				{this.state.showMusic &&
-					<Music onLoad={this.show.bind(this)}/>
+					<Music onLoad={this.onMusicLoad.bind(this)}/>
 				}
 			</div>
 		);

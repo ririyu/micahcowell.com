@@ -18,7 +18,7 @@ export default class Work extends React.Component {
 					<li>
 						<b>2015:</b>
 						<div>
-							Web Design for MSLK
+							<span>Web Design for MSLK</span>
 							<ul>
 								<li><a href="http://sherikoetting.com">sherikoetting.com</a></li>
 								<li><a href="http://gif-giving.com">gif-giving.com</a></li>
