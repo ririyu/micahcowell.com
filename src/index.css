@@ -6,11 +6,18 @@
     font-size: 48px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.1; }
+  .app-container a {
+    color: #0000ff; }
+    .app-container a:hover, .app-container a:visited, .app-container a:active {
+      color: #0000ff; }
+    .app-container a.data {
+      -webkit-transition: opacity 500ms ease;
+      transition: opacity 500ms ease; }
   .app-container div {
     width: 90%;
-    padding: 8px 0;
+    padding: 12px 0;
     white-space: nowrap; }
-    .app-container div * {
+    .app-container div > img, .app-container div div {
       display: inline-block;
       vertical-align: middle; }
     .app-container div img {
@@ -19,20 +26,22 @@
       @media screen and (max-width: 375px) {
         .app-container div img {
           width: 24px; } }
-    .app-container div p {
-      margin-left: 12px;
+    .app-container div div {
+      margin-left: 16px;
       font-size: 16px;
-      font-family: monospace;
-      white-space: pre-wrap;
-      word-wrap: break-word; }
+      font-family: monospace; }
+      .app-container div div span, .app-container div div a {
+        white-space: pre-wrap;
+        word-wrap: break-word; }
+    .app-container div ul {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 8px 48px; }
       @media screen and (max-width: 375px) {
-        .app-container div p {
-          margin-left: 8px;
-          font-size: 14px; } }
-    .app-container div a {
-      color: #0000ff; }
-      .app-container div a:hover, .app-container div a:visited, .app-container div a:active {
-        color: #0000ff; }
-    .app-container div .data {
-      -webkit-transition: opacity 500ms ease;
-      transition: opacity 500ms ease; }
+        .app-container div ul {
+          margin-left: 40px; } }
+      .app-container div ul li {
+        white-space: pre-wrap;
+        word-wrap: break-word; }
+      .app-container div ul b {
+        margin-right: 4px; }

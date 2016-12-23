@@ -6,7 +6,9 @@ export default class Home extends React.Component {
 		return (
 			<div>
 				<img src={Icon} alt="round-pushpin" />
-				<p>Richland, WA</p>
+				<div>
+					<span>Richland, WA</span>
+				</div>
 			</div>
 		);
 	}

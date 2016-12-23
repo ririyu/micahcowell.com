@@ -6,7 +6,9 @@ export default class School extends React.Component {
 		return (
 			<div>
 				<img src={Icon} alt="books" />
-				<p>Richland High School</p>
+				<div>
+					<span>Richland High School</span>
+				</div>
 			</div>
 		);
 	}

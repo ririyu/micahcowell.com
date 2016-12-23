@@ -36,13 +36,13 @@ export default class Music extends React.Component {
 		return (
 			<div>
 				<img src={Icon} alt="headphone" />
-				<p>
+				<div>
 					<a className="data"
 					   style={textStyle}
 					   href="http://last.fm/user/getmicah">
 						{this.state.response}
 					</a>
-				</p>
+				</div>
 			</div>
 		);
 	}

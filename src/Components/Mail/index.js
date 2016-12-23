@@ -6,9 +6,9 @@ export default class Mail extends React.Component {
 		return (
 			<div>
 				<img src={Icon} alt="mailbox" />
-				<p>
+				<div>
 					<a href="mailto:micahcowell@gmail.com">micahcowell@gmail.com</a>
-				</p>
+				</div>
 			</div>
 		);
 	}
