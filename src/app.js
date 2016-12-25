@@ -13,4 +13,3 @@ app.appendChild(container).appendChild(canvas);
 
 // configure game
 const game = new Game(ctx);
-game.test();
