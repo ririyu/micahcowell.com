@@ -4,5 +4,20 @@ module.exports = {
 		filename: 'bundle.js',
 		path: __dirname + '/build'
 	},
-	watch: true
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				loaders: ['babel-loader']
+			},
+			{
+				test: /\.scss$/,
+        		loaders: ['style', 'css', 'sass']
+			}
+		]
+	},
+	devServer: {
+		inline: true,
+		port: 8080
+	}
 }
