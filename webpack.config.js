@@ -2,6 +2,7 @@ module.exports = {
 	entry: './src/app.js',
 	output: {
 		filename: 'bundle.js',
+		publicPath: '/build',
 		path: __dirname + '/build'
 	},
 	module: {
@@ -17,7 +18,9 @@ module.exports = {
 		]
 	},
 	devServer: {
+		colors: true,
 		inline: true,
+		historyApiFallback: true,
 		port: 8080
 	}
 }
