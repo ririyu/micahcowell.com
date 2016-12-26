@@ -1,5 +1,5 @@
 import css from './Styles/main.scss';
-import Game from './Components/game.js';
+import Game from './Game';
 
 // create elements
 const app = document.getElementById('app');
@@ -12,4 +12,5 @@ canvas.height = 160;
 app.appendChild(container).appendChild(canvas);
 
 // configure game
-const game = new Game(ctx);
+const game = new Game(ctx, canvas.width, canvas.height);
+game.init();
