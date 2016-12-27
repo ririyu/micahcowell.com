@@ -9,11 +9,18 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				loaders: ['babel-loader']
+				loader: 'babel-loader'
 			},
 			{
 				test: /\.scss$/,
         		loaders: ['style', 'css', 'sass']
+			},
+			{
+				test: /\.(jpg|png)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 25000
+				}
 			}
 		]
 	},

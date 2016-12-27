@@ -1,16 +1,51 @@
-import css from './Styles/main.scss';
-import Game from './Game';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// create elements
-const app = document.getElementById('app');
-const container = document.createElement('div');
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-container.id = 'app-container';
-canvas.width = 384;
-canvas.height = 320;
-app.appendChild(container).appendChild(canvas);
+import css from './Style/main.scss';
 
-// configure game
-const game = new Game(ctx, canvas.width, canvas.height);
-game.init();
+import Home from './Components/Home';
+import School from './Components/School';
+import Work from './Components/Work';
+import Mail from './Components/Mail';
+import Music from './Components/Music';
+
+export default class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			musicWasLoaded: false,
+			showMusic: true
+		}
+	}
+	onMusicLoad(error) {
+		if (error) {
+			console.log(error);
+			this.setState({showMusic:false});
+		}
+		this.setState({musicWasLoaded:true});
+	}
+	render() {
+		const style = {
+			opacity: 0
+		}
+		if (this.state.musicWasLoaded) {
+			style.opacity = 1;
+		}
+		return (
+			<div className="app-container" style={style}>
+				<h1>Micah Cowell</h1>
+				<Home />
+				<School />
+				<Work />
+				<Mail />
+				{this.state.showMusic &&
+					<Music onLoad={this.onMusicLoad.bind(this)}/>
+				}
+			</div>
+		);
+	}
+}
+
+ReactDOM.render(
+  <App />, document.getElementById('app')
+);

@@ -1,0 +1,85 @@
+@import "normalize";
+
+$iphone: 375px;
+
+.app-container {
+	padding: 16px;
+	transition: opacity 500ms ease;
+	h1 {
+		font-size: 48px;
+		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+		line-height: 1.1;
+	}
+	a {
+		color: #0000ff;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:hover, &:visited, &:active {
+			color: #0000ff;
+		}
+	}
+	b {
+		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+	> div {
+		width: 90%;
+		padding: 12px 0;
+		font-family: monospace;
+		font-size: 16px;
+		white-space: nowrap;
+		> * {
+			display: inline-block;
+			word-wrap: break-word;
+			white-space: pre-wrap;
+		}
+		> img {
+			vertical-align: middle;
+			width: 32px;
+			height: auto;
+			@media screen and (max-width: $iphone) {
+				width: 24px;
+			}
+		}
+		> div {
+			vertical-align: middle;
+			margin-left: 16px;
+		}
+		> ul {
+			vertical-align: top;
+			list-style: none;
+			margin: 0 0 -10px 16px;
+			padding: 0;
+			> li {
+				margin: 6px 0 12px 0;
+				font-size: 14px;
+				@media screen and (max-width: $iphone) {
+					font-size: 12px;
+				}
+				> * {
+					display: inline-block;
+					vertical-align: top;
+				}
+				b {
+					margin-right: 8px;
+				}
+				div {
+					ul {
+						list-style: none;
+						padding: 0;
+						margin: 0;
+						li {
+							margin: 8px 0;
+							font-size: 12px;
+							&:before {
+								content: "*";
+								margin-right: 4px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
