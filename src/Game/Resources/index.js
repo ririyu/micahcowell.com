@@ -1,6 +1,6 @@
 export default class Resources {
-	constructor() {
-		this.src = ['img/map.png'];
+	constructor(src) {
+		this.src = src;
 		this.cache = [];
 		this.loaded = 0;
 		this.callback;

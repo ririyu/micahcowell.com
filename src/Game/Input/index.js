@@ -1,6 +1,9 @@
 export default class Input {
 	constructor() {
-		this.move = {};
+		this.left;
+		this.up;
+		this.right;
+		this.down;
 	}
 	init() {
 		document.addEventListener('keydown', this.handleKeyInput.bind(this, true));
@@ -9,16 +12,16 @@ export default class Input {
 	handleKeyInput(status, e) {
 		switch (e.which) {
 			case 37:
-				this.move.left = status;
+				this.left = status;
 				break;
 			case 38:
-				this.move.up = status;
+				this.up = status;
 				break;
 			case 39:
-				this.move.right = status;
+				this.right = status;
 				break;
 			case 40:
-				this.move.down = status;
+				this.down = status;
 				break;
 		}
 	}
