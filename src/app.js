@@ -7,8 +7,8 @@ const container = document.createElement('div');
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 container.id = 'app-container';
-canvas.width = 240;
-canvas.height = 160;
+canvas.width = 384;
+canvas.height = 320;
 app.appendChild(container).appendChild(canvas);
 
 // configure game

@@ -1,14 +1,16 @@
 export default class Entity {
-	constructor(ctx, width, height, velocity, x, y) {
+	constructor(ctx, x, y, v, cw, ch) {
 		this.ctx = ctx;
-		this.width = width;
-		this.height = height;
-		this.velocity = velocity;
 		this.x = x;
 		this.y = y;
-		this.res;
+		this.velocity = v;
+		this.canvas = {
+			width: cw,
+			height: ch
+		}
+		this.sprite;
 	}
-	init(res) {
-		this.res = res;
+	init(sprite) {
+		this.sprite = sprite;
 	}
 }

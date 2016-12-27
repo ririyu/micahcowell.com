@@ -1,41 +1,40 @@
 import Resources from './Resources';
 import Input from './Input';
 import requestAnimationFrame from './State/requestAnimationFrame';
-import Map from './Entity/Map';
+import Scene from './Scene';
+import Hero from './Entity/Hero';
 
 const src = ['img/map.png'];
 
 export default class Game {
-	constructor(ctx, width, height) {
+	constructor(ctx, w, h) {
 		this.res = new Resources(src);
 		this.input = new Input();
-		this.map = new Map(ctx, width, height, 40, 0, 0);
+		this.map = new Scene(ctx);
+		this.guy = new Hero(ctx, 100, 100, 5, w, h);
 		this.ctx = ctx;
-		this.width = width;
-		this.height = height;
-		this.lastTime;
+		this.width = w;
+		this.height = h;
 	}
 	init() {
 		this.input.init();
 		this.res.load(function() {
-			this.map.init(this.res);
-			this.lastTime = Date.now();
+			this.map.init(this.res.cache[0]);
+			this.guy.init('blue', 10);
 			this.main();
 		}.bind(this));
 	}
 	main() {
 		requestAnimationFrame(this.main.bind(this));
-	    let now = Date.now();
-		let dt = (now - this.lastTime) / 1000;
-		this.update(dt);
+		this.update();
 		this.render();
-		this.lastTime = now;
 	}
-	update(dt) {
-		this.map.update(this.input, dt);
+	update() {
+		this.guy.update(this.input);
 	}
 	render() {
 		this.ctx.clearRect(0, 0, this.width, this.height);
 		this.map.render();
+		this.guy.render();
 	}
 }
