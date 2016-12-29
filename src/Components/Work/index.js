@@ -13,7 +13,7 @@ export default class Work extends React.Component {
 					</li>
 					<li>
 						<b>2016:</b>
-						<div>Irrigation at Mercer Farms</div>
+						<div>Irrigation at Mercer Canyons</div>
 					</li>
 					<li>
 						<b>2015:</b>
