@@ -37,10 +37,10 @@ export default class App extends React.Component {
 				<Home />
 				<School />
 				<Work />
-				<Mail />
 				{this.state.showMusic &&
 					<Music onLoad={this.onMusicLoad.bind(this)}/>
 				}
+				<Mail />
 			</div>
 		);
 	}
