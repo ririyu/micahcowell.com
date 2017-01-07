@@ -1,85 +1,51 @@
 @import "normalize";
+@import "fonts";
 
-$iphone: 375px;
+$black: #272727;
 
-.app-container {
-	padding: 16px;
-	transition: opacity 500ms ease;
-	h1 {
-		font-size: 48px;
-		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-		line-height: 1.1;
+html {
+    font-size: 100%;
+}
+
+#app {
+	max-width: 700px;
+	padding: 4em 2em;
+	margin: 0 auto;
+	text-align: center;
+    font-family: "mono", monospace;
+    font-size: 1rem;
+	line-height: 2;
+	color: $black;
+}
+
+#listening {
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+h1 {
+	margin: 0.5em 0;
+	font-size: 3rem;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	line-height: 1.2;
+}
+
+p {
+	margin: 1em 0;
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 0.15em solid $black;
+	color: $black;
+	&:hover {
+		color: $black;
 	}
-	a {
-		color: #0000ff;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-		&:hover, &:visited, &:active {
-			color: #0000ff;
-		}
+	&:active {
+		color: $black;
 	}
-	b {
-		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	}
-	> div {
-		width: 90%;
-		padding: 14px 0;
-		font-family: monospace;
-		font-size: 16px;
-		white-space: nowrap;
-		> * {
-			display: inline-block;
-			word-wrap: break-word;
-			white-space: pre-wrap;
-		}
-		> img {
-			vertical-align: middle;
-			width: 32px;
-			height: auto;
-			@media screen and (max-width: $iphone) {
-				width: 24px;
-			}
-		}
-		> div {
-			vertical-align: middle;
-			margin-left: 16px;
-		}
-		> ul {
-			vertical-align: top;
-			list-style: none;
-			margin: 0 0 -10px 16px;
-			padding: 0;
-			> li {
-				margin: 6px 0 12px 0;
-				font-size: 14px;
-				@media screen and (max-width: $iphone) {
-					font-size: 12px;
-				}
-				> * {
-					display: inline-block;
-					vertical-align: top;
-				}
-				b {
-					margin-right: 8px;
-				}
-				div {
-					ul {
-						list-style: none;
-						padding: 0;
-						margin: 0;
-						li {
-							margin: 8px 0 0 4px;
-							font-size: 12px;
-							&:before {
-								content: "*";
-								margin-right: 4px;
-							}
-						}
-					}
-				}
-			}
-		}
+	&:visited {
+		color: $black;
 	}
 }

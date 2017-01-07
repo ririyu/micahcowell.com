@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
 	entry: './src/app.js',
 	output: {
@@ -7,6 +9,10 @@ module.exports = {
 	},
 	module: {
 		loaders: [
+			{
+				test: /\.html$/,
+				loader: "raw-loader"
+			},
 			{
 				test: /\.js$/,
 				loader: 'babel-loader'
@@ -24,6 +30,14 @@ module.exports = {
 			}
 		]
 	},
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true,
+			compress: {
+        		warnings: false
+    		}
+		})
+	],
 	devServer: {
 		colors: true,
 		inline: true,
