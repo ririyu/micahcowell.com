@@ -24,9 +24,6 @@ body {
 	@media (max-width: ($width)) {
 		padding: 4em 2em;
 	}
-	@media (max-width: $iphone) {
-		padding: 2em;
-	}
 }
 
 h1 {
