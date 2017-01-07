@@ -1,7 +1,9 @@
 @import "normalize";
 @import "fonts";
 
-$black: #272727;
+$color-bg: #333333;
+$color-fg: #F5F5DC;
+$color-link: #F5F5DC;
 $iphone: 375px;
 $width: 700px;
 
@@ -10,13 +12,15 @@ html {
 }
 
 body {
+	color: $color-fg;
+	background: $color-bg;
 	max-width: $width;
-	padding: 4em;
+	padding: 8em 4em 4em 4em;
 	margin: 0 auto;
     font-family: "mono", monospace;
     font-size: 1rem;
+	font-weight: 400;
 	line-height: 2;
-	color: $black;
 	@media (max-width: ($width)) {
 		padding: 4em 2em;
 	}
@@ -26,10 +30,17 @@ body {
 }
 
 h1 {
-	margin: 0.5em 0;
+	color: $color-fg;
+	margin: 0;
 	font-size: 4rem;
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: 700;
+	word-spacing: normal;
 	line-height: 1.2;
+}
+
+pre {
+	margin: 0 0 3em 0;
+	line-height: 0;
 }
 
 p {
@@ -38,16 +49,17 @@ p {
 }
 
 a {
+	color: $color-link;
+	font-weight: 700;
 	text-decoration: none;
-	border-bottom: 0.15em solid $black;
-	color: $black;
+	border-bottom: 0.15em solid $color-link;
 	&:hover {
-		color: $black;
+		color: $color-link;
 	}
 	&:active {
-		color: $black;
+		color: $color-link;
 	}
 	&:visited {
-		color: $black;
+		color: $color-link;
 	}
 }
