@@ -14,19 +14,12 @@ module.exports = {
 				loader: "raw-loader"
 			},
 			{
+				test: /\.scss/,
+				loader: "raw-loader"
+			},
+			{
 				test: /\.js$/,
 				loader: 'babel-loader'
-			},
-			{
-				test: /\.scss$/,
-        		loaders: ['style', 'css', 'sass']
-			},
-			{
-				test: /\.(jpg|png)$/,
-				loader: 'url-loader',
-				options: {
-					limit: 25000
-				}
 			}
 		]
 	},

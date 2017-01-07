@@ -9,7 +9,7 @@ html {
     font-size: 100%;
 }
 
-#app {
+body {
 	max-width: $width;
 	padding: 4em;
 	margin: 0 auto;
@@ -23,11 +23,6 @@ html {
 	@media (max-width: $iphone) {
 		padding: 2em;
 	}
-}
-
-#listening {
-	opacity: 0;
-	transition: opacity 500ms;
 }
 
 h1 {

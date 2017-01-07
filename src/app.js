@@ -1,5 +1,5 @@
 require('../index.html');
-import css from './Style/main.scss';
+require('./scss/main.scss');
 import nowPlaying from './nowPlaying';
 
 // now playing from last.fm

@@ -10,7 +10,7 @@ export default class nowPlaying {
 			characters: gibberish,
 			speed: 50
 		});
-		this.duration = 1500;
+		this.duration = 500;
 		this.delay = 500;
 	}
 	fetch() {
@@ -27,6 +27,5 @@ export default class nowPlaying {
 	}
 	show(data, error) {
 		this.el.start().text(text => data).reveal(this.duration, this.delay);
-		this.el.elements[0].element.style.opacity = 1;
 	}
 }
