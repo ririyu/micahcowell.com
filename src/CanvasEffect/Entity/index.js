@@ -6,6 +6,5 @@ export default class Entity {
 		this.x;
 		this.y;
 	}
-	update() {}
 	render() {}
 }
