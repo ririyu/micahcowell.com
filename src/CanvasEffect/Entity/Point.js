@@ -9,6 +9,7 @@ export default class Point extends Entity {
 		//this.speed = this.getRandomArbitrary(5, 2.5);		// fast
 		this.radius = this.getRandomArbitrary(3, 1);
 		this.theta = this.getRandomTheta();
+		this.color = '#666666';
 	}
 	getRandomArbitrary(max, min) {
 		return Math.random() * (max - min) + min;
@@ -28,6 +29,7 @@ export default class Point extends Entity {
 		this.y += Math.sin(this.theta) * this.speed;
 	}
 	render() {
+		this.ctx.fillStyle = this.color;
 		this.ctx.beginPath();
 		this.ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
 		this.ctx.fill();
