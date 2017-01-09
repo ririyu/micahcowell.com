@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "webpack"
+	"sass": "sass --watch scss/main.scss:build/main.css",
+	"build": "webpack"
   },
   "repository": {
     "type": "git",

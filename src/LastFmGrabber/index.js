@@ -15,17 +15,19 @@ export default class nowPlaying {
 	}
 	fetch() {
 		axios.get(getRecentTracksURL)
-			.then(function(response) {
-				let track = response.data.recenttracks.track[0];
-				let data = track.artist['#text'] + ' - ' + track.name;
-				this.show(data);
-			}.bind(this))
-			.catch(function(error) {
-				let data = 'Error: could\'t connect to last.fm';
-				this.show(data, true);
-			}.bind(this));
+			.then(this.success.bind(this))
+			.catch(this.fail.bind(this));
 	}
-	show(data, error) {
+	success(response) {
+		let track = response.data.recenttracks.track[0];
+		let data = track.artist['#text'] + ' - ' + track.name;
+		this.show(data);
+	}
+	fail(error) {
+		let data = 'Error: could\'t connect to last.fm';
+		this.show(data, true);
+	}
+	show(data) {
 		this.el.start().text(text => data).reveal(this.duration, this.delay);
 	}
 }

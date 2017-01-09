@@ -1,7 +1,12 @@
 require('../index.html');
-require('./scss/main.scss');
-import nowPlaying from './nowPlaying';
+require('../scss/main.scss');
+import CanvasGame from './CanvasGame';
+import LastFmGrabber from './LastFmGrabber';
+
+// background canvas effect
+let starryNight = new CanvasGame('#starry-night');
+starryNight.init();
 
 // now playing from last.fm
-let music = new nowPlaying('#listening');
-music.fetch();
+let nowPlaying = new LastFmGrabber('#now-playing');
+nowPlaying.fetch();
