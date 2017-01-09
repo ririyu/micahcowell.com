@@ -9,9 +9,12 @@ export default class Line extends Entity {
 		this.y2 = y2;
 		this.max = 100;
 	}
+	inProximity() {
+		return Math.abs(this.x1 - this.x2) <= this.max &&
+			   Math.abs(this.y1 - this.y2) <= this.max;
+	}
 	render() {
-		if (Math.abs(this.x1 - this.x2) <= this.max &&
-			Math.abs(this.y1 - this.y2) <= this.max) {
+		if (this.inProximity()) {
 			this.ctx.beginPath();
 			this.ctx.moveTo(this.x1, this.y1);
 			this.ctx.lineTo(this.x2, this.y2);

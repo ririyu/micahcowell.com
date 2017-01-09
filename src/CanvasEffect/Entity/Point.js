@@ -5,7 +5,7 @@ export default class Point extends Entity {
 		super(ctx);
 		this.x = x;
 		this.y = y;
-		this.speed = this.getRandomArbitrary(0.5, 0.25); 	// slow
+		this.speed = this.getRandomArbitrary(0.2, 0.1); 	// slow
 		//this.speed = this.getRandomArbitrary(5, 2.5);		// fast
 		this.radius = this.getRandomArbitrary(3, 1);
 		this.theta = this.getRandomTheta();

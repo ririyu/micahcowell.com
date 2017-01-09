@@ -11,7 +11,8 @@ export default class CanvasEffect {
 		this.complexity = this.getComplexity();
 		this.points = [];
 		this.lines = [];
-		this.color = '#666666';
+		this.stroke = 'rgba(255,255,255,0.1)';
+		this.fill = '#666666';
 	}
 	getComplexity() {
 		return this.canvas.width * this.canvas.height / 10000;
@@ -44,8 +45,8 @@ export default class CanvasEffect {
 	}
 	render() {
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-		this.ctx.strokeStyle = this.color;
-		this.ctx.fillStyle = this.color;
+		this.ctx.fillStyle = this.fill;
+		this.ctx.strokeStyle = this.stroke;
 		for (let i = 0; i < this.points.length; i++) {
 			this.points[i].render();
 		}
