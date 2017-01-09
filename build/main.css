@@ -378,7 +378,7 @@ html {
   font-size: 100%; }
 
 body {
-  color: #F5F5DC;
+  color: #f5f5dc;
   background: #333333;
   max-width: 700px;
   padding: 8em 4em 4em 4em;
@@ -400,7 +400,7 @@ canvas {
   z-index: -1; }
 
 h1 {
-  color: #F5F5DC;
+  color: #f5f5dc;
   margin: 0 0 0.5em 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 4rem;
@@ -411,15 +411,15 @@ p {
   font-size: 1rem; }
 
 a {
-  color: #F5F5DC;
+  color: #f5f5dc;
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 0.15em solid #F5F5DC; }
+  border-bottom: 0.15em solid #f5f5dc; }
   a:hover {
-    color: #F5F5DC; }
+    color: #f5f5dc; }
   a:active {
-    color: #F5F5DC; }
+    color: #f5f5dc; }
   a:visited {
-    color: #F5F5DC; }
+    color: #f5f5dc; }
 
 /*# sourceMappingURL=main.css.map */
