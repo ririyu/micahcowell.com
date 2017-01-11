@@ -7,13 +7,15 @@ $color-link: #f5f5dc;
 $iphone: 375px;
 $width: 700px;
 
-html {
-    font-size: 100%;
+body {
+	background: $color-bg;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-body {
+#app {
 	color: $color-fg;
-	background: $color-bg;
 	max-width: $width;
 	padding: 8em 4em 4em 4em;
 	margin: 0 auto;
@@ -26,10 +28,11 @@ body {
 	}
 }
 
-canvas {
-	position: absolute;
+#starry-night {
+	position: fixed;
 	top: 0; left: 0;
 	z-index: -1;
+	overflow: hidden;
 }
 
 h1 {
