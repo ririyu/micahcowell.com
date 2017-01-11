@@ -1,7 +1,7 @@
 require('../index.html');
 require('../scss/main.scss');
 import LastFmGrabber from './LastFmGrabber';
-import { Constellations } from 'CanvasEffects';
+import { Constellations } from 'canvas-effects';
 
 // now playing from last.fm
 let nowPlaying = new LastFmGrabber('#now-playing');

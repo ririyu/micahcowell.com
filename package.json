@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
-	"sass": "sass --watch scss/main.scss:build/main.css",
-	"build": "webpack"
+    "sass": "sass --watch scss/main.scss:build/main.css",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "baffle": "^0.3.6"
+    "baffle": "^0.3.6",
+    "canvas-effects": "git+https://git@github.com/getmicah/CanvasEffects.git"
   }
 }
