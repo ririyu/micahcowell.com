@@ -29,6 +29,6 @@
   "dependencies": {
     "axios": "^0.15.3",
     "baffle": "^0.3.6",
-    "canvas-effects": "git+https://git@github.com/getmicah/CanvasEffects.git"
+    "canvas-effects": "^0.1.0"
   }
 }
