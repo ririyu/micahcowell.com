@@ -15,6 +15,6 @@ const starryNight = new Constellations({
 		color: '#666666'
 	},
 	line: {
-		color: [120,120,120]
+		color: [120,120,120,1]
 	}
 });
