@@ -11,6 +11,7 @@ const starryNight = new Constellations({
 	container: '#starry-night',
 	width: '100%',
 	height: '100%',
+	seed: 6000,
 	point: {
 		color: '#666666'
 	},
