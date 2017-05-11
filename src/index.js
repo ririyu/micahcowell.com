@@ -7,7 +7,7 @@ let nowPlaying = new LastFmGrabber('#now-playing');
 nowPlaying.fetch();
 
 const starryNight = new Constellations({
-	container: '#starry-night',
+	container: '#foo',
 	width: '100%',
 	height: '100%',
 	seed: 6000,
